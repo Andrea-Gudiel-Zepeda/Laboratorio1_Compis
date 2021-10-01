@@ -48,6 +48,8 @@ namespace Lab1_AndreaGudiel_1115219
                                 //Console.ReadLine();
                             }
 
+                            Expresion.Clear();
+
                         }
                         break;
 
