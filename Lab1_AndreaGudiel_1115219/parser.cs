@@ -9,7 +9,6 @@ namespace Lab1_AndreaGudiel_1115219
         
         static List<char> PILA = new List<char>();
         static List<Token> Entrada = new List<Token>();
-        static List<char> EXPRESION = new List<char>();
 
         private void S(Token _token)
         {
@@ -186,19 +185,7 @@ namespace Lab1_AndreaGudiel_1115219
 
         }
 
-       /* private void Match(TokenType tag)
-        {
-            if (_token.Tag == tag)
-            {
-                _token = _scanner.GetToken();
-            }
-            else
-            {
-                throw new Exception("Error de Sintaxis");
-            }
-        }*/
-
-        public void Parse(List<Token> regex)
+        public bool Parse(List<Token> regex)
         {
             Entrada = regex;
             bool correcto = false;
@@ -317,6 +304,8 @@ namespace Lab1_AndreaGudiel_1115219
 
             } while (!correcto);
 
+
+            return correcto;
         }
     }
 }
